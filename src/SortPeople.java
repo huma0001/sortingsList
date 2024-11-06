@@ -31,7 +31,20 @@ public class SortPeople {
             System.out.println(person);
         }
 
-        people1.sort(new lastNameComparator());
+        lastNameComparator lastNameComparator = new lastNameComparator();
+
+        //Kan også skrives på disse måder:
+        // Collections.sort(people1, lastnameComparator);
+        //people1.sort(new lastNameComparator());
+
+        //Kan også tilføje flere ting at sorterer efter ved at tilføje .thenComparing som sådan:
+        // people1.sort(new nameComparator().thenComparing(new AgeComparator));
+        // .thenComparing gøre at hvis i dette eksempel begge lastNames er identiske så går den videre til then comparing og
+        // --sammenligner den næste ting hvilket i dette tilfælde er alder, og stiller dem så via deres alder istedet for last name, da deres last names er identiske og ka ikke blive sorteret
+
+        // NOTE** AgeComparator og lastNameComparator er deres egne klasser og derfor bruges keyword "new"
+
+        people1.sort(lastNameComparator);
 
         System.out.println();
 

@@ -2,9 +2,10 @@ import java.util.Comparator;
 
 public class Person implements Comparable<Person>{
 
-    // Comparator
-    public static Comparator<Person> AGE_COMPARATOR = Comparator.comparing(Person::getAge)
+    // Gammel Comparator
+    /*public static Comparator<Person> AGE_COMPARATOR = Comparator.comparing(Person::getAge)
             .thenComparing(Person::getFirstName);
+     */
 
 
 
